@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+  padding: 0
+  color: #333;
+}
+header{
+  margin: 0;
+  display: flex;
+}
+header, section{
+  padding: 1rem 4rem;
+}
+h1{
+  font-size: 1rem;
+  margin: 0;
+  flex-grow: 1;
+}
+h2{
+  font-size: 1.44rem;
+}
+.navigation{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.navigation li{
+  display: inline-block;
+  font-size: .88rem;
+}
+.questions{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.questions li{
+  border: solid 1px black;
+  display: block;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.questions h3{
+  margin: 0;
+  font-size: 1rem;
+}
