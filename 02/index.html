@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>情報基礎 2 中間試験</title>
+    <link rel="stylesheet" href="../lib/highlight/styles/default.css">
+    <link rel="stylesheet" href="../lib/mocha/mocha.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../lib/expect.js/index.js"></script>
+    <script src="../lib/mocha/mocha.js"></script>
+    <script src="../lib/highlight/highlight.pack.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>情報基礎2 中間試験</h1>
+      <nav>
+        <ul class="navigation">
+          <li><a href="../index.html">事前準備</a></li>
+          <li><a href="../01/index.html">第01問</a></li>
+          <li><a href="../02/index.html">第02問</a></li>
+          <li><a href="../03/index.html">第03問</a></li>
+          <li><a href="../04/index.html">第04問</a></li>
+          <li><a href="../05/index.html">第05問</a></li>
+          <li><a href="../06/index.html">第06問</a></li>
+          <li><a href="../07/index.html">第07問</a></li>
+          <li><a href="../08/index.html">第08問</a></li>
+          <li><a href="../09/index.html">第09問</a></li>
+          <li><a href="../10/index.html">第10問</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>四則演算</h2>
+      <p>以下の仕様を満たすように、5 つの四則演算を行う関数を定義してください。定義は 02.js 記述してください。</p>
+      <h3>利用例</h3>
+      <pre><code class="javascript">
+var one = plus(1, 0);
+one == 1; // true;
+
+var zero = minus(one, 1);
+zero == 0; // true;
+
+var eight = times(2, 4);
+eight == 8; // true
+
+var two = div(eight, 4);
+two == 2; // true
+
+var rest = mod(eight, 7);
+rest == one; // true
+      </code></pre>
+      <h3>仕様</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>関数名</th><th>引数の数</th><th>返り値</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>plus</td><td>2</td><td>第1引数に第2引数を足した結果</td></tr>
+          <tr><td>minus</td><td>2</td><td>第1引数から第2引数を引いた結果</td></tr>
+          <tr><td>times</td><td>2</td><td>第1引数に第2引数をかけた結果</td></tr>
+          <tr><td>div</td><td>2</td><td>第1引数を第2引数で割った結果</td></tr>
+          <tr><td>mod</td><td>2</td><td>第1引数を第2引数で割った余り</td></tr>
+        </tbody>
+      </table>
+      <h3>テスト</h3>
+      <div id="mocha"></div>
+    </section>
+    <footer>
+      <h3>情報技術基礎2</h3>
+      <ul>
+        <li><a href="https://sfcjs2016s.github.io/">講義サイト</a></li>
+        <li><a href="https://www.github.com/sfcjs2016s/">GitHub</a></li>
+        <li><a href="../index.html">中間試験トップ</a>
+      </ul>
+    </footer>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>mocha.setup('bdd')</script>
+    <script src="../spec/02_spec.js"></script>
+    <script>mocha.run();</script>
+  </body>
+</html>
