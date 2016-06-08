@@ -10,23 +10,13 @@
       <h1>情報基礎2 中間試験</h1>
       <nav>
         <ul class="navigation">
-          <li><a href="01">第01問</a></li>
-          <li><a href="02">第02問</a></li>
-          <li><a href="03">第03問</a></li>
-          <li><a href="04">第04問</a></li>
-          <li><a href="05">第05問</a></li>
-          <li><a href="06">第06問</a></li>
-          <li><a href="07">第07問</a></li>
-          <li><a href="08">第08問</a></li>
-          <li><a href="09">第09問</a></li>
-          <li><a href="10">第10問</a></li>
+          <li><a href="#prerquisite">回答するための事前準備</a></li>
+          <li><a href="#how-to-answer">解答方法</a></li>
+          <li><a href="#submission">提出方法</a></li>
         </ul>
       </nav>
     </header>
-    <section>
-      <p>以下の解説を全て確認された上で、それぞれの試験問題に解答してください。</p>
-    </section>
-    <section>
+    <section id="prerequisite">
       <h2>解答するための事前準備</h2>
       <p>
         中間試験に解答するためには、次の準備を済ませておく必要があります。準備はこれまでの授業で全て済ませているはずですが、済ませていない場合は、解答する前に全て設定しておいてください。
@@ -41,10 +31,10 @@
         特に GitHub のアカウント登録は、解答の提出のために必須となっています。登録されていない方は、<a href="https://github.com/join">こちらの登録ページ</a>からアカウント登録をしてください。
       </p>
       <p>
-        また登録されたアカウントを、清水にお知らせいただけないと、採点結果を成績に反映できなくなります。新たに GitHub のアカウント登録をされた方、もしくはこれまでにお知らせいただいていない方は、こちらのフォームにご記入ください。
+        また登録されたアカウントを、清水にお知らせいただけないと、採点結果を成績に反映できなくなります。新たに GitHub のアカウント登録をされた方、もしくはこれまでにお知らせいただいていない方は、<a href="https://docs.google.com/forms/d/1vbY8Tz0qgGAYqE9E3JnC2r4F3ZWli429aUzb8nYz78E/viewform">こちらのフォーム</a>にご記入ください。
       </p>
     </section>
-    <section>
+    <section id="how-to-answer">
       <h2>解答方法</h2>
       <ul>
         <li>試験問題は、01 から 10 までのフォルダに分かれています。</li>
@@ -54,7 +44,7 @@
         <li>関数定義後、問題の記述されているページを再読み込みすることで、要件の充足度が測れます。</li>
       </ul>
     </section>
-    <section>
+    <section id="submission">
       <h2>提出方法</h2>
       <ul>
         <li>提出は GitHub で pull request を送ることによって行います。</li>
@@ -62,38 +52,70 @@
         <li>pull request が送られていない場合、受験されなかったものとして扱います。</li>
       </ul>
     </section>
-    <section>
+    <section id="questions">
       <h2>問題</h2>
-      <ul class="questions">
+      <ol class="questions">
         <li>
           <h3>恒等写像</h3>
           <p>引数に指定された値をそのまま返す関数のことを恒等写像と言います。この問題は、恒等写像 id を定義します。</p>
-          <p><a class="btn" href="01">この問題を解く</a></p>
+          <p class="control"><a class="btn" href="01/index.html">この問題を解く</a></p>
+        </li>
+        <li>
+          <h3>四則演算</h3>
+          <p>数値同士の二項演算である、足し算、引き算、掛け算、割り算、そして剰余の計算を行う関数を定義します。</p>
+          <p class="control"><a class="btn" href="02/index.html">この問題を解く</a></p>
         </li>
         <li>
           <h3>偶数の判定</h3>
           <p>自然数は、偶数と奇数の2種類に分類できます。この問題では、引数に指定された自然数がそのどちらに属するかを判定する関数を定義します。</p>
-          <p><a class="btn" href="02">この問題を解く</a></p>
+          <p class="control"><a class="btn" href="03/index.html">この問題を解く</a></p>
+        </li>
+        <li>
+          <h3>論理演算</h3>
+          <p>真偽値を対象にした演算のことを論理演算と呼びます。この問題は論理和、論理積、否定を基本とした、さまざまな論理演算を行う関数を定義します。</p>
+          <p class="control"><a class="btn" href="04/index.html">この問題を解く</a></p>
+        </li>
+        <li>
+          <h3>文字列の操作</h3>
+          <p>0 個以上の文字の列のことを、文字列と呼びます。ここでは文字列を利用したいくつかの関数を定義します。</p>
+          <p class="control"><a class="btn" href="05/index.html">この問題を解く</a></p>
         </li>
         <li>
           <h3>FizzBuzz問題</h3>
           <p>FizzBuzz というパーティーゲームがあります。このゲームのプレーヤーは順番に番号を言っていくのですが、特定の条件を満たす場合に、"Fizz"、"Buzz"、"FizzBuzz" と言わなくてはなりません。この問題では、引数に指定された番号の人が、言わなくてはならない言葉を返す関数を定義します。</p>
-          <p><a class="btn" href="03">この問題を解く</a></p>
+          <p class="control"><a class="btn" href="06/index.html">この問題を解く</a></p>
         </li>
         <li>
           <h3>距離関数</h3>
           <p>2つのものの間の距離を測る関数のことを距離関数と言います。この問題では、あるルールにしたがって2つのものの間の距離を返す関数を定義します。</p>
-          <p><a class="btn" href="04">この問題を解く</a></p>
+          <p class="control"><a class="btn" href="07/index.html">この問題を解く</a></p>
         </li>
         <li>
           <h3>うるう年</h3>
           <p>1年の長さは365日ですが、時より366日となる年があります。そのような年のことをうるう年と呼びます。この問題では引数に指定された年が、うるう年か否かを判定する関数を定義します。</p>
-          <p><a class="btn" href="05">この問題を解く</a></p>
+          <p class="control"><a class="btn" href="08/index.html">この問題を解く</a></p>
         </li>
         <li>
-          <h3>進数変換</h3>
-          <p>私たちは数値を記述する時に、通常10進数で記述します。数字の記法には、10進数以外にも、2進数や16進数、60進数といったものがあります。これはそれぞれ2、16、60で桁がくりあがる記法です。この問題では10進数の数字を、7進数に変換するプログラムを記述します。</p>
+          <h3>位取り記数法</h3>
+          <p>現在の日本では、数字を記述する際に位取り記数法という方法を用いています。これに従うと、10 倍するごとに 1 つ桁が上がるというルールにしたがって記述することになります。1234 という数は、1000 * 1 + 100 * 2 + 10 * 3 + 1 * 4 を表します。ここでは位取り記数法に関するいくつかの関数を定義します。</p>
+          <p class="control"><a class="btn" href="09/index.html">この問題を解く</a></p>
         </li>
+        <li>
+          <h3>足し算と引き算を行う計算機</h3>
+          <p>
+            1 + 2 - 3 のような足し算と引き算のみの計算式があるとします。この式が [1, "+", 2, "-", 3] のように配列で与えられた時、これを正しく計算する計算機を作ります。
+          </p>
+          <p class="control"><a class="btn" href="10/index.html">この問題を解く</a></p>
+        </li>
+      </ol>
+    </section>
+    <footer>
+      <h3>情報技術基礎2</h3>
+      <ul>
+        <li><a href="https://sfcjs2016s.github.io/">講義サイト</a></li>
+        <li><a href="https://www.github.com/sfcjs2016s/">GitHub</a></li>
+        <li><a href="../index.html">中間試験トップ</a>
       </ul>
+    </footer>
   </body>
 </html>

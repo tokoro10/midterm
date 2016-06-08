@@ -1,0 +1,45 @@
+# in order to use 'trusty' dist, need this.
+# see https://docs.travis-ci.com/user/trusty-ci-environment/
+sudo: required
+
+# trust dist provides a modern build chain (as opposed to 'precise' dist)
+# which absolves us from having to install compilers and stuff
+dist: trusty
+
+language: node_js
+
+env:
+  global: PHANTOMJS_CDNURL='https://cnpmjs.org/downloads'
+
+matrix:
+  include:
+    - node_js: '6'
+      env: TARGET='clean lint test-node test-browser'
+    - node_js: '5'
+      env: TARGET=test-node
+    - node_js: '4'
+      env: TARGET=test-node
+    - node_js: 'iojs'
+      env: TARGET=test-node
+    - node_js: '0.12'
+      env: TARGET=test-node
+    - node_js: '0.11'
+      env: TARGET=test-node
+    - node_js: '0.10'
+      env: TARGET=test-node
+    - node_js: '0.8'
+      env: TARGET=test-node
+
+before_install:
+  # node 0.8 won't install our dev deps with an out-of-box npm;
+  # this upgrades it
+  - node ./scripts/upgrade-npm.js
+
+script: travis_retry make $TARGET
+
+notifications:
+  urls:
+    # for gitter
+    - secure: "EmycFlk48bUvOQ07mxnbcn6T+n3G4wVWuXgrDsUUp6EhJ9866wQK9i+qVhqogWuSEQrGoVaS/vpc/NEYxDP30BD/+nqgvOhVhLVEgtziI85imyV/oUVpArdW3AUmuzCrx7rQCivygjpBmWV9ZcUT5Km4qp1iQhuumy2WbplxrZ4="
+  on_success: change
+  on_failure: always
