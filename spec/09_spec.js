@@ -11,7 +11,7 @@
       it("数字の桁数を返す", function(){
         expect(countDigits(zero)).to.be(f(zero));
         expect(countDigits(a)).to.be(f(a));
-        expect(countDigits(a)).to.be(f(b));
+        expect(countDigits(b)).to.be(f(b));
       });
     });
 
@@ -21,7 +21,7 @@
 
       it("-1 を返す", function(){
         expect(countDigits(a)).to.be(f(a));
-        expect(countDigits(a)).to.be(f(b));
+        expect(countDigits(b)).to.be(f(b));
       });
     });
 
@@ -31,7 +31,7 @@
 
       it("小数点以下を切り捨て、桁数を返す", function(){
         expect(countDigits(a)).to.be(f(a));
-        expect(countDigits(a)).to.be(f(b));
+        expect(countDigits(b)).to.be(f(b));
       });
     });
 
