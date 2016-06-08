@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>情報基礎 2 中間試験</title>
+    <link rel="stylesheet" href="../lib/highlight/styles/default.css">
+    <link rel="stylesheet" href="../lib/mocha/mocha.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../lib/expect.js/index.js"></script>
+    <script src="../lib/mocha/mocha.js"></script>
+    <script src="../lib/highlight/highlight.pack.js"></script>
+    <script src="06.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>情報基礎2 中間試験</h1>
+      <nav>
+        <ul class="navigation">
+          <li><a href="../index.html">事前準備</a></li>
+          <li><a href="../01/index.html">第01問</a></li>
+          <li><a href="../02/index.html">第02問</a></li>
+          <li><a href="../03/index.html">第03問</a></li>
+          <li><a href="../04/index.html">第04問</a></li>
+          <li><a href="../05/index.html">第05問</a></li>
+          <li><a href="../06/index.html">第06問</a></li>
+          <li><a href="../07/index.html">第07問</a></li>
+          <li><a href="../08/index.html">第08問</a></li>
+          <li><a href="../09/index.html">第09問</a></li>
+          <li><a href="../10/index.html">第10問</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>FizzBuzz 問題</h2>
+      <p>以下の仕様を満たすように、関数を定義してください。定義は 06.js に記述してください。</p>
+      <h3>利用例</h3>
+      <pre><code class="javascript">
+fizzbuzz(1) == 1; // true
+fizzbuzz(2) == 2; // true
+fizzbuzz(3) == "fizz"; // true
+fizzbuzz(4) == 4; // true
+fizzbuzz(5) == "buzz"; // true
+fizzbuzz(6) == "fizz"; // true
+fizzbuzz(7) == 7; // true
+fizzbuzz(8) == 8; // true
+fizzbuzz(9) == "fizz"; // true
+fizzbuzz(10) == "buzz"; // true
+fizzbuzz(11) == 11; // true
+fizzbuzz(12) == 12; // true
+fizzbuzz(13) == 13; // true
+fizzbuzz(14) == 14; // true
+fizzbuzz(15) == "fizzbuzz"; // true
+      </code></pre>
+      <h3>仕様</h3>
+      <ul>
+        <li>関数名：fizzbuzz</li>
+        <li>引数：1 つの整数値（1以上）</li>
+        <li>返り値：
+          <ul>
+            <li>引数が 3 の倍数の場合：fizz という文字列を返す</li>
+            <li>引数が 5 の倍数の場合：buzz という文字列を返す</li>
+            <li>引数が 3 の倍数で、しかも 5 の倍数の場合：fizzbuzz という文字列を返す</li>
+            <li>それ以外：引数の数値を返す</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>テスト</h3>
+      <div id="mocha"></div>
+    </section>
+    <footer>
+      <h3>情報技術基礎2</h3>
+      <ul>
+        <li><a href="https://sfcjs2016s.github.io/">講義サイト</a></li>
+        <li><a href="https://www.github.com/sfcjs2016s/">GitHub</a></li>
+        <li><a href="../index.html">中間試験トップ</a>
+      </ul>
+    </footer>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>mocha.setup('bdd')</script>
+    <script src="../spec/06_spec.js"></script>
+    <script>mocha.run();</script>
+  </body>
+</html>

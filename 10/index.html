@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>情報基礎 2 中間試験</title>
+    <link rel="stylesheet" href="../lib/highlight/styles/default.css">
+    <link rel="stylesheet" href="../lib/mocha/mocha.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../lib/expect.js/index.js"></script>
+    <script src="../lib/mocha/mocha.js"></script>
+    <script src="../lib/highlight/highlight.pack.js"></script>
+    <script src="10.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>情報基礎2 中間試験</h1>
+      <nav>
+        <ul class="navigation">
+          <li><a href="../index.html">事前準備</a></li>
+          <li><a href="../01/index.html">第01問</a></li>
+          <li><a href="../02/index.html">第02問</a></li>
+          <li><a href="../03/index.html">第03問</a></li>
+          <li><a href="../04/index.html">第04問</a></li>
+          <li><a href="../05/index.html">第05問</a></li>
+          <li><a href="../06/index.html">第06問</a></li>
+          <li><a href="../07/index.html">第07問</a></li>
+          <li><a href="../08/index.html">第08問</a></li>
+          <li><a href="../09/index.html">第09問</a></li>
+          <li><a href="../10/index.html">第10問</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>足し算と引き算を行う計算機</h2>
+      <p>以下の仕様を満たすように、関数を定義してください。定義は 10.js に記述してください。</p>
+      <h3>利用例</h3>
+      <pre><code class="javascript">
+var exp1 = [1, "+", 1];
+var exp2 = [1, "-", 1];
+var exp3 = [1, "+", 1, "-", 2];
+var exp3 = [1, "+", 1, "-", 2, "+", -10];
+
+calc(exp1) == 2; // true
+calc(exp2) == 0; // true
+calc(exp3) == 0; // true
+calc(exp4) == -10; // true
+      </code></pre>
+      <h3>仕様</h3>
+      <ul>
+        <li>関数名：calc</li>
+        <li>引数：1 つの配列</li>
+        <li>返り値：配列で表された式を評価して、その計算結果を返す：
+          <ul>
+            <li>上記の exp1 のように、[数値, "+" , 数値] の場合、二つの数値の足し算を行う</li>
+            <li>上記の exp2 のように、[数値, "-" , 数値] の場合、二つの数値の引き算を行う</li>
+            <li>"+", "-" のことを演算子と呼び、演算子はこの 2 種類しか存在しない</li>
+            <li>上記の exp3 のように、[数値1, 演算子1 , 数値2, 演算子2, 数値3 …] となっている場合、最初の 3 つの演算を行い、
+              [数値1, 演算子1 , 数値2] の計算を行い、その結果を a を使って [a, 演算子2, 数値3] の計算を行う。これを配列の要素がなくなるまで繰り返す</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>テスト</h3>
+      <div id="mocha"></div>
+    </section>
+    <footer>
+      <h3>情報技術基礎2</h3>
+      <ul>
+        <li><a href="https://sfcjs2016s.github.io/">講義サイト</a></li>
+        <li><a href="https://www.github.com/sfcjs2016s/">GitHub</a></li>
+        <li><a href="../index.html">中間試験トップ</a>
+      </ul>
+    </footer>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>mocha.setup('bdd')</script>
+    <script src="../spec/10_spec.js"></script>
+    <script>mocha.run();</script>
+  </body>
+</html>
