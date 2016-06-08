@@ -6,7 +6,7 @@
   describe("strlen", function(){
     it("文字列の長さを返す", function(){
       expect(strlen(zero)).to.be(zero.length);
-      expect(strlen(hello)).to.be(zero.length);
+      expect(strlen(hello)).to.be(hello.length);
     });
   });
 
